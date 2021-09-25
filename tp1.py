@@ -165,27 +165,13 @@ while(True):
 			j+=1
  
 	if(x==4):
-		print("Type the block you want to see ")
+		print("Type the transaction you want to see ")
 		y=int(input())
-		if(y<=sz):
-			y-=1
-			z=int(y/3)
-			a=y%3
-			print(blockchain[z][a].timestamp)
-			print(blockchain[z][a].prev_hash)
-			print(blockchain[z][a].hash)	
-			print(blockchain[z][a].amount)	
-			print(blockchain[z][a].name)
- 
-		elif(y>sz and y<=sz+cnt):
-			y-=1
-			z=int(y/3)
-			a=y%3    	
-			print(tempchain[a].timestamp)
-			print(tempchain[a].prev_hash)
-			print(tempchain[a].hash)	
-			print(tempchain[a].amount)	
-			print(tempchain[a].name)
+		print(transaction[y].timestamp)
+		print(transaction[y].prev_hash)
+		print(transaction[y].hash)	
+		print(transaction[y].amount)	
+		print(transaction[y].name)
 		
 	if(x==2):
 		count=1
